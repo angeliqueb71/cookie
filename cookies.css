@@ -1,0 +1,56 @@
+body {
+  background-image: url(http://sallysbakingaddiction.com/wp-content/uploads/2014/05/Soft-Cut-Out-Sugar-Cookies-by-sallysbakingaddiction.com-6.jpg);
+  background-size: cover;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Spirax', cursive;
+  color: #886899;
+
+}
+h1 {
+  font-size: 70px;
+  text-align: center;
+  font-family: 'Spirax', cursive;
+  color: #886899;
+
+}
+h2 {
+  font-family: 'Niconne', cursive;
+  text-align: center;
+  font-size: 30px;
+  color: #4C3B43;
+}
+
+#conf {
+  font-size: 25px;
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  color: #BA8FA4;
+  float: right;
+  background-color: #F8FAFF;
+}
+#lemon {
+  background-image: url(http://3.bp.blogspot.com/-ihslA79lPDA/T3NwMn9KJvI/AAAAAAAAAn8/IF38x67kVFg/s1600/lavender%2Bcookies.jpg);
+  color: #E8CA0C;
+}
+#sugar {
+  background-image: url(https://s-media-cache-ak0.pinimg.com/236x/47/e2/88/47e28814396d70f64ffaf964e80a832b.jpg);
+  color: #8B58B4;
+}
+#choco {
+  background-image: url(http://www.pancakeweekend.com/recipes/chocolate-sugar-cookies.jpg);
+  color: #84A37D;
+}
+
+#choco, #lemon, #sugar {
+  background-size: 400px;
+  background-repeat: no-repeat;
+  font-size: 30px;
+  font-family: 'Spirax', cursive;
+  font-weight: bolder;
+  width: 400px;
+  height: 75px;
+  padding: 100px 50px;
+  border-radius: 30px;
+}
