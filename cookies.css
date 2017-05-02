@@ -21,29 +21,20 @@ h2 {
   color: #4C3B43;
 }
 
-#conf {
-  font-size: 25px;
-  position: absolute;
-  top: 35px;
-  right: 30px;
-  color: #BA8FA4;
-  float: right;
-  background-color: #F8FAFF;
-}
-#lemon {
+#button1 {
   background-image: url(http://3.bp.blogspot.com/-ihslA79lPDA/T3NwMn9KJvI/AAAAAAAAAn8/IF38x67kVFg/s1600/lavender%2Bcookies.jpg);
   color: #E8CA0C;
 }
-#sugar {
+#button2 {
   background-image: url(https://s-media-cache-ak0.pinimg.com/236x/47/e2/88/47e28814396d70f64ffaf964e80a832b.jpg);
   color: #8B58B4;
 }
-#choco {
+#button3 {
   background-image: url(http://www.pancakeweekend.com/recipes/chocolate-sugar-cookies.jpg);
   color: #84A37D;
 }
 
-#choco, #lemon, #sugar {
+#button1, #button2, #button3 {
   background-size: 400px;
   background-repeat: no-repeat;
   font-size: 30px;
@@ -53,4 +44,13 @@ h2 {
   height: 75px;
   padding: 100px 50px;
   border-radius: 30px;
+}
+
+#button4 {
+ color: #8B58B4;
+
+}
+
+#message {
+  font-size: 15px;
 }

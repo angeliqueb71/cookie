@@ -1,74 +1,66 @@
+document.addEventListener("DOMContentLoaded", function (){
 
-// console.log("hello");
-// document.cookie = "hello=test"
-var lemonButton=document.querySelectorById("#lemon");
-var lemon = 0
-var sugarButton=document.querySelectorById("#sugar");
-var sugar = 0
-var chocoButton=document.querySelectorById("#choco");
-var choco = 0
+var sugar = document.querySelector("#button1");
+var chocolate = document.querySelector("#button2");
+var lemon = document.querySelector("#button3");
+var clear = document.querySelector("#button4");
+var title = document.getElementById("h2");
 
-Cookies.set('sugarButton', 'Sugar')
-Cookies.set('lemonButton', 'Lemon')
-Cookies.set('chocoButton', 'Chocolate')
+var sugarValue = 0;
+var chocolateValue = 0;
+var lemonValue = 0;
 
-Cookies.get('sugarButton');
-Cookies.get('lemonButton');
-Cookies.get('chocoButton');
+// Cookies.set("Sugar", sugarValue);
+// Cookies.set("Chocolate", chocolateValue);
+// Cookies.set("Lemon", lemonValue);
 
+sugar.addEventListener("click", function(){
+  event.preventDefault();
+    alert("You have just added a Sugar Cookie!");
+    sugarValue += 1;
+    Cookies.set("Sugar", sugarValue);
+    sugar.innerHTML = sugarValue;
+    title.innerHTML = sugarValue + chocolateValue + lemonValue;
+});
 
-$(document).ready(function () {
- $("button").on("click", function () {
- })
-})
-///cookies - button
-sugarButton.addEventListener("click", function () {
-  var x = sugar
-  document.getElementById("sugar").value;
-  document.getElementById("2").innerHTML = "You have selected our sUgAr sUgAr fab cookie: " + x;
-  sugar++
-  console.log("Sugar: ", sugar);
-})
+chocolate.addEventListener("click", function(){
+  event.preventDefault();
+    alert("You have just added a Chocolate Cookie!");
+    chocolateValue += 1;
+    Cookies.set("Chocolate", chocolateValue);
+    chocolate.innerHTML = chocolateValue;
+    title.innerHTML = sugarValue + chocolateValue + lemonValue;
+});
 
-lemonButton.addEventListener("click", function () {
-  var x = lemon
-  document.getElementById("lemon").value;
-  document.getElementById("1").innerHTML = "You have selected our Lavender Lemon sugar cookie: " + x;
-  lemon++
-  console.log("Lemon: ", lemon);
-})
+lemon.addEventListener("click", function(){
+  event.preventDefault();
+    alert("You have just added a Lemon Cookie!");
+    lemonValue += 1;
+    Cookies.set("Lemon", lemonValue);
+    lemon.innerHTML = lemonValue;
+    title.innerHTML = sugarValue + chocolateValue + lemonValue;
+});
 
-chocoButton.addEventListener("click", function () {
-  var x = choco
-  document.getElementById("choco").value;
-  document.getElementById("3").innerHTML = "You have selected our White Chocolate sugar cookie: " + x;
-  choco++
-  console.log("Chocolate: ", choco);
-})
+clear.addEventListener("click", function(){
+  event.preventDefault();
+    alert("Are you sure that you want to do that?");
+    sugar.innerHTML = sugarValue = 0;
+    chocolate.innerHTML = chocolateValue = 0;
+    lemon.innerHTML = lemonValue = 0;
+    title.innerHTML = 0;
+ });
 
+ function lemonType (){
+  lemon.innerHTML = Cookies.get("Lemon");
+ };
+ function sugarType (){
+  sugar.innerHTML = Cookies.get("Sugar");
+ };
+ function chocolateType (){
+  chocolate.innerHTML = Cookies.get("Chocolate");
+ };
+ window.onload = lemonType();
+ window.onload = sugarType();
+ window.onload = chocolateType();
 
-function myFunction() {
-    var x = lemon
-    document.getElementById("lemon")select.value;
-    document.getElementById("1").innerHTML = "You have selected our Lavender Lemon sugar cookie: " + x;
-    lemon++
-
-    // check which cookie was clicked by using select.value
-    // if lemon then write document.getElementById("1").innerHTML = "You have selected our Lavender Lemon sugar cookie: " + x
-    // else if sugar then write document.getElementById("1").innerHTML = "You have selected our sUgAr sUgAr fab cookie: " + x
-    // else if choco then write document.getElementById("1").innerHTML = "You have selected our White Chocolate sugar cookie: " + x
-}
-
-function myFunction() {
-    var x = sugar
-    document.getElementById("sugar").value;
-    document.getElementById("2").innerHTML = "You have selected our sUgAr sUgAr fab cookie: " + x;
-    sugar++
-}
-
-function myFunction() {
-    var x = choco
-    document.getElementById("choco").value;
-    document.getElementById("3").innerHTML = "You have selected our White Chocolate sugar cookie: " + x;
-    choco++
-}
+});
